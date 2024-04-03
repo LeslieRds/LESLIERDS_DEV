@@ -13,4 +13,7 @@ Rails.application.routes.draw do
 
   resources :comments, only: %i[destroy]
   resources :users, only: %i[new]
+  resources :abouts
+  resources :portfolios
+
 end
