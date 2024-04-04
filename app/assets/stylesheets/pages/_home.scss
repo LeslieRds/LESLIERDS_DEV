@@ -1,11 +1,17 @@
 // Specific CSS for your home-page
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+.hbg{
+  background-color: white;
 }
 
-.banner h1 {
+.header {
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 35px;
+}
+
+.header h1 {
   margin: 0;
   color: rgb(11, 10, 10);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -13,7 +19,7 @@
   font-weight: bold;
 }
 
-.banner p {
+.header p {
   font-size: 20px;
   color: rgb(65, 16, 244);
   opacity: .7;

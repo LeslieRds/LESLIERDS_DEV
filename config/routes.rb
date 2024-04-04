@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'comments/new'
   devise_for :users
   root to: "pages#home"
+  get 'about', to: 'pages#about'
+  get 'portfolio', to: 'pages#portfolio'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -13,7 +15,5 @@ Rails.application.routes.draw do
 
   resources :comments, only: %i[destroy]
   resources :users, only: %i[new]
-  resources :abouts
-  resources :portfolios
 
 end
