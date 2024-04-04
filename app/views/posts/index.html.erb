@@ -1,0 +1,41 @@
+<header class="hbg">
+  <div class="container py-5">
+    <div class="header">
+      <div class="col-md-10 center">
+        <img src="https://res.cloudinary.com/ddt8brfwz/image/upload/v1712230812/Design_sans_titre_1_klokjm.svg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-10">
+        <div class="card-body text-center">
+          <h1>Le blog</h1>
+          <p>Là où je vous parle un peu plus de web et de développement</p><br>
+          <a class="btn btn-outline-success" href="#">Me contacter</a>
+        </div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="articles">
+    <div class="container py-5">
+      <h1 class="w-100 text-center pb-3 title-index">Toutes les dernières tendances</h1>
+        <% @posts.each do |post| %>
+          <div class="card py-5">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img class="img-fluid rounded-start"><%= post.image %>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h2 class="card-title"><%= post.title %></h2>
+                  <p class="card-text text-justify"><%= post.subtitle %></p>
+                  <h5 class="card-text text-justify"><%= post.category %></h5>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-gradient">
+            <%= link_to "Lire l'article", post_path(post), class: "text-decoration-none text-black" %>
+            </button>
+          </div>
+        <% end %>
+    </div>
+  </section>
+</main>

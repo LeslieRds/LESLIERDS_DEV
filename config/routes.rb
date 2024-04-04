@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'comments/new'
   devise_for :users
   root to: "pages#home"
   get 'about', to: 'pages#about'
@@ -14,6 +13,5 @@ Rails.application.routes.draw do
   end
 
   resources :comments, only: %i[destroy]
-  resources :users, only: %i[new]
 
 end
