@@ -1,0 +1,16 @@
+<header>
+</header>
+<main>
+  <section class="services">
+    <div class="container blog py-5">
+      <h1>Les derniers articles</h1>
+      <div class="cards-articles py-5 text-justify">
+        <% @articles.each do |article| %>
+          <h2 class="card-title"><%= article.title %></h2>
+          <p class="card-text"><%= article.subtitle%></p>
+          <button type="button" class="btn btn-outline-success"><%= link_to "Lire l'article", article_path(article), class: "text-decoration-none text-color" %></button>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</main>

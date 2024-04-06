@@ -1,0 +1,27 @@
+<header>
+</header>
+<main>
+  <section class="article">
+    <div class="container main-card py-5" >
+      <div class="form-edit mb-5">
+      <%= simple_form_for @article do |f| %>
+          <%= f.input :title %>
+          <%= f.input :subtitle %>
+          <%= f.input :content,as: :text %>
+          <%= f.input :category %>
+          <%= f.button :submit, "Enregister l'article' !", class: "btn btn-primary" %>
+      <% end %>
+      </div>
+    <%= link_to '< Retour aux articles', articles_path %>
+    </div>
+    <% if @article.errors.any? %>
+      <div id="error_explanation">
+        <ul>
+          <% @article.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </section>
+</main>
